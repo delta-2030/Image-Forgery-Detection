@@ -21,3 +21,21 @@ Error Level Analysis (ELA) is a digital forensic technique used to detect image 
 introduces varying levels of artifacts depending on how much an image region has been altered or recompressed.
 
 In the Splicing folder, main.py contains the major code and the folder also includestet images which can be changed before running the code. 
+
+**INPAINTING DETECTION**
+
+Inpainting Detection is a forensic technique used to identify regions in an image that have been digitally altered or manipulated, specifically through inpainting. Inpainting involves reconstructing or filling parts of an image, often to remove unwanted objects or imperfections. This process can leave detectable artifacts, which the provided method highlights using pixel difference analysis, edge detection, noise analysis, and gradient direction comparison.
+
+**Libraries used:**
+**1. NumPy (numpy as np)**
+**Purpose:** NumPy is used for handling arrays and numerical operations efficiently.
+**2. Pillow (PIL)**
+**Purpose:** Pillow (PIL) is used for image manipulation and comparison.
+**3. Matplotlib (matplotlib.pyplot as plt)**
+**Purpose:** Matplotlib is a plotting library used for visualization.
+**4. SciPy (scipy.signal.convolve2d)**
+**Purpose:** Used for applying convolution operations during image filtering and edge detection.
+
+This method provides a robust pipeline for detecting tampered regions by leveraging pixel intensity differences, edge mismatches, noise inconsistencies, and gradient irregularities. Each step targets specific artifacts introduced during inpainting, making the approach comprehensive and effective.
+
+In the Inpaiting Detection folder, main.py contains the major code and the folder also includes test images (both original and inpainted) which can be changed before running the code. 
