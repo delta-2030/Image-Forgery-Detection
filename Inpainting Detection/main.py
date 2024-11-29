@@ -97,6 +97,6 @@ def analyze_inpainting_with_original(original_path, suspected_path):
     noise_analysis(suspected)
     gradient_direction_comparison(original, suspected)
     print("Analysis complete. Results displayed.")
-original_path = "C:\\Users\\Aryan\\Downloads\\Dhoni800x800 (1).jpg" 
-suspected_path = "C:\\Users\\Aryan\\Downloads\\Dhoni800x800.jpg"  
+original_path = "Image2.jpg" 
+suspected_path = "Image2inpainted.jpg"  
 analyze_inpainting_with_original(original_path, suspected_path)
