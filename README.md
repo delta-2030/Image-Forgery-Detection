@@ -73,7 +73,7 @@ Deepfake video detection was implemented in following steps -
 6.) If classifier classifies majority of the images as fake, the final verdict will be that the video is Deepfaked.
 
 
-Note -> We have tried to make the model as accurate as possible.We had also tested our model on several videos and obtained accurate results. However, due to limitations like, the number of videos Classifier is trained(System Requirements and long time to train) on as well as our theoretical knowledge of detecting deepfakes can yield some inaccurate results. We had tried our best we could to make it as accurate as possible.
+Note -> We spent a lot of time trying to make this model as accurate as possible. However, we were not able to achieve that becuase we were not able to train our RandomForestClassifier on a large dataset because even smaller datasets took hours to run.The code can give inaccurate results sometimes.
 
 **How to Run**
 Paste the path of the video to be tested in Deepfake.py Run the Deepfake.py script in command window using the command
