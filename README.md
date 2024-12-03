@@ -1,20 +1,11 @@
 # Image-Forgery-Detection
 **SPLICING**
-
-Splicing forgery, a common type of digital image manipulation, involves copying and pasting regions from one or multiple images into another. Detecting such forgeries is crucial in digital forensics. 
-The given presents a method based on Error Level Analysis (ELA) that utilizes image compression artifacts to identify tampered regions. By recompressing the image and analyzing 
-differences in compression artifacts, this method effectively highlights inconsistencies that indicate possible forgery.
-
 **Libraries used:**
 **1. OpenCV (cv2)**
-**Purpose:** OpenCV is an open-source computer vision library used for image processing.
 **2. NumPy (numpy as np)**
-**Purpose:** NumPy is used for handling arrays and numerical operations efficiently.
 **3. Pillow (PIL)**
-**Modules Used:** Image, ImageChops, ImageEnhance
-**Purpose:** Pillow (PIL) is used for image manipulation and comparison.
 4. Matplotlib (matplotlib.pyplot as plt)
-**Purpose:** Matplotlib is a plotting library used for visualization.
+Install above libraries using pip command
 
 **Method to use the code:**
 1. **Clone the Splicing Repository**
