@@ -56,3 +56,25 @@ The Image was input to SIFT algorithm that detected keypoints and generated a 12
 **How to Run**
 Run the main.py script in command window using the command
  -> python main.py
+
+ **Deepfake Detection**
+
+**Libraries Required**
+Run the following command on terminal to download necessary packages and libraries to run the code
+-> pip install numpy opencv-python scikit-learn scikit-image joblib
+
+**Implementation**
+Deepfake video detection was implemented in following steps -
+1.) Extract all frames from the video.
+2.) Use Haar cascade algorithm to extract coordinates of the faces from frames.
+3.) Process the frames containing faces to extract features such as texture and information using Local Binary Pattern and Canny's edge Detection Algorithm respectively.
+4.) Extract some other features such as blurriness, saturation and color distribution information.
+5.) Crate a combined feature vector of the obtained features and provide it as an input to RandomForectClassfier pre trained to classify images as Fake or Real based on the feature vector.
+6.) If classifier classifies majority of the images as fake, the final verdict will be that the video is Deepfaked.
+
+
+Note -> We have tried to make the model as accurate as possible.We had also tested our model on several videos and obtained accurate results. However, due to limitations like, the number of videos Classifier is trained(System Requirements and long time to train) on as well as our theoretical knowledge of detecting deepfakes can yield some inaccurate results. We had tried our best we could to make it as accurate as possible.
+
+**How to Run**
+Paste the path of the video to be tested in Deepfake.py Run the Deepfake.py script in command window using the command
+ -> python Deepfake.py
