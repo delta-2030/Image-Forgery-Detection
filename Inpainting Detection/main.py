@@ -37,7 +37,7 @@ def edge_detection(image):                                         # Function to
     sobel_y = np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]])        # Sobel Kernels for the Y direction
     gradient_x = manual_convolution(image, sobel_x)
     gradient_y = manual_convolution(image, sobel_y)
-    edges = np.sqrt(gradient_x**2 + gradient_y**2)
+    edges = np.sqrt(gradient_x**2 + gradient_y**2)                    # Compute magnitude of gradients
     edges = (edges / edges.max()) * 255  
     edges = edges.astype(np.uint8)
     return edges
