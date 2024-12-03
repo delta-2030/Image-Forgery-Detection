@@ -33,14 +33,13 @@ Inpainting Detection is a forensic technique used to identify regions in an imag
 
 **Libraries used:**
 **1. NumPy (numpy as np)**
-**Purpose:** NumPy is used for handling arrays and numerical operations efficiently.
 **2. Pillow (PIL)**
-**Purpose:** Pillow (PIL) is used for image manipulation and comparison.
 **3. Matplotlib (matplotlib.pyplot as plt)**
-**Purpose:** Matplotlib is a plotting library used for visualization.
-**4. SciPy (scipy.signal.convolve2d)**
-**Purpose:** Used for applying convolution operations during image filtering and edge detection.
 
-This method provides a robust pipeline for detecting tampered regions by leveraging pixel intensity differences, edge mismatches, noise inconsistencies, and gradient irregularities. Each step targets specific artifacts introduced during inpainting, making the approach comprehensive and effective.
-
-In the Inpaiting Detection folder, main.py contains the major code and the folder also includes test images (both original and inpainted) which can be changed before running the code. 
+**Method to use the code:**
+1. **Clone the Inpainting Detection Repository**
+2. **Add Your Target Images**-Place both the images (original and suspected) you want to analyze in the repository folder. Change the image path accordingly.  
+3. **Run the Script**
+4. **Output Explanation**
+   The script will display:
+Pixel difference map, edge maps of both images and their differences, noise maps of both images and gradient direction maps of both images and their differences. These outputs will provide insights into areas that were potentially modified in the suspected image. Pixel-difference map will reveal the potential pixel modifications in the image, edge map difference will show the added smoothness/layer over the image, noise analysis will potentially reveal any irregular noise patters in the image and the gradient different will point out the suspected regions in a heatmap.
