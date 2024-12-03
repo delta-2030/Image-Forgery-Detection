@@ -43,3 +43,16 @@ Inpainting Detection is a forensic technique used to identify regions in an imag
 4. **Output Explanation:**
    The script will display:
 Pixel difference map, edge maps of both images and their differences, noise maps of both images and gradient direction maps of both images and their differences. These outputs will provide insights into areas that were potentially modified in the suspected image. Pixel-difference map will reveal the potential pixel modifications in the image, edge map difference will show the added smoothness/layer over the image, noise analysis will potentially reveal any irregular noise patters in the image (Manually) and the gradient different will point out the suspected regions in a heatmap.
+
+**Copy Move Forgery**
+**Libraries Required**
+Run the following command on terminal to download necessary packages and libraries to run the code
+-> pip install numpy opencv-python scikit-learn scikit-image joblib
+
+**Algorithms Used**
+Copy-Move forgery was implemented with the help SIFT and DBSCAN algorithms.
+The Image was input to SIFT algorithm that detected keypoints and generated a 128 dimensional feature vector for each keypoint. The coordinates of these keypoints and feature vectorswere then input to DBSCAN algorithm which clustered the points lying close in feature space. The points lying within the same cluster are the most probable points of being forged.
+
+**How to Run**
+Run the main.py script in command window using the command
+ -> python main.py
