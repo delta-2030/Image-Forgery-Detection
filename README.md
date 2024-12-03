@@ -6,9 +6,11 @@
 **2. NumPy (numpy as np)**
 **3. Pillow (PIL)**
 4. Matplotlib (matplotlib.pyplot as plt)
+
 Install above libraries using pip command
 
-**Method to use the code:**
+**Method to use the code -**
+
 1. **Clone the Splicing Repository**
 2. **Add Your Image**-Place the image you want to analyze in the repository folder. Change the image path to 
 3. **Run the Script**
@@ -23,12 +25,13 @@ Below or equal to 5: No significant forgery detected.
 
 Inpainting Detection is a forensic technique used to identify regions in an image that have been digitally altered or manipulated, specifically through inpainting. Inpainting involves reconstructing or filling parts of an image, often to remove unwanted objects or imperfections. This process can leave detectable artifacts, which the provided method highlights using pixel difference analysis, edge detection, noise analysis, and gradient direction comparison.
 
-**Libraries used:**
+**Libraries used - **
 **1. NumPy (numpy as np)**
 **2. Pillow (PIL)**
 **3. Matplotlib (matplotlib.pyplot as plt)**
 
-**Method to use the code:**
+**Method to use the code-**
+
 1. **Clone the Inpainting Detection Repository**
 2. **Add Your Target Images**-Place both the images (original and suspected) you want to analyze in the repository folder. Change the image path accordingly.  
 3. **Run the Script**
@@ -37,7 +40,8 @@ Inpainting Detection is a forensic technique used to identify regions in an imag
 Pixel difference map, edge maps of both images and their differences, noise maps of both images and gradient direction maps of both images and their differences. These outputs will provide insights into areas that were potentially modified in the suspected image. Pixel-difference map will reveal the potential pixel modifications in the image, edge map difference will show the added smoothness/layer over the image, noise analysis will potentially reveal any irregular noise patters in the image (Manually) and the gradient different will point out the suspected regions in a heatmap.
 
 **Copy Move Forgery**
-**Libraries Required**
+
+**Libraries Required - **
 Run the following command on terminal to download necessary packages and libraries to run the code
 -> pip install numpy opencv-python scikit-learn scikit-image joblib
 
