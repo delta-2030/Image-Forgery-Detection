@@ -16,11 +16,16 @@ differences in compression artifacts, this method effectively highlights inconsi
 4. Matplotlib (matplotlib.pyplot as plt)
 **Purpose:** Matplotlib is a plotting library used for visualization.
 
-**Concept**
-Error Level Analysis (ELA) is a digital forensic technique used to detect image tampering, such as splicing or modification. It works by exploiting the fact that JPEG compression 
-introduces varying levels of artifacts depending on how much an image region has been altered or recompressed.
-
-In the Splicing folder, main.py contains the major code and the folder also includestet images which can be changed before running the code. 
+**Method to use the code:**
+1. **Clone the Splicing Repository**
+2. **Add Your Image**-Place the image you want to analyze in the repository folder. Change the image path to 
+3. **Run the Script**
+4. **Output Explanation**
+**ELA Result**: Shows the error level analysis of the input image.
+**Binary Mask**: Highlights regions with potential forgery.
+**Mean Difference**: A value indicating the extent of compression inconsistencies.
+Above 5: Potential forgery detected.
+Below or equal to 5: No significant forgery detected.
 
 **INPAINTING DETECTION**
 
