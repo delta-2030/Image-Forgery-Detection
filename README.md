@@ -1,7 +1,8 @@
 # Image-Forgery-Detection
 **SPLICING**
 
-**Libraries used - **
+**Libraries used**  
+
 **1. OpenCV (cv2)**
 **2. NumPy (numpy as np)**
 **3. Pillow (PIL)**
@@ -25,12 +26,13 @@ Below or equal to 5: No significant forgery detected.
 
 Inpainting Detection is a forensic technique used to identify regions in an image that have been digitally altered or manipulated, specifically through inpainting. Inpainting involves reconstructing or filling parts of an image, often to remove unwanted objects or imperfections. This process can leave detectable artifacts, which the provided method highlights using pixel difference analysis, edge detection, noise analysis, and gradient direction comparison.
 
-**Libraries used - **
+**Libraries used** 
+
 **1. NumPy (numpy as np)**
 **2. Pillow (PIL)**
 **3. Matplotlib (matplotlib.pyplot as plt)**
 
-**Method to use the code-**
+**Method to use the code**
 
 1. **Clone the Inpainting Detection Repository**
 2. **Add Your Target Images**-Place both the images (original and suspected) you want to analyze in the repository folder. Change the image path accordingly.  
@@ -41,25 +43,30 @@ Pixel difference map, edge maps of both images and their differences, noise maps
 
 **Copy Move Forgery**
 
-**Libraries Required - **
+**Libraries Required**
+
 Run the following command on terminal to download necessary packages and libraries to run the code
 -> pip install numpy opencv-python scikit-learn scikit-image joblib
 
 **Algorithms Used**
+
 Copy-Move forgery was implemented with the help SIFT and DBSCAN algorithms.
 The Image was input to SIFT algorithm that detected keypoints and generated a 128 dimensional feature vector for each keypoint. The coordinates of these keypoints and feature vectorswere then input to DBSCAN algorithm which clustered the points lying close in feature space. The points lying within the same cluster are the most probable points of being forged.
 
 **How to Run**
+
 Run the main.py script in command window using the command
  -> python main.py
 
  **Deepfake Detection**
 
 **Libraries Required**
+
 Run the following command on terminal to download necessary packages and libraries to run the code
 -> pip install numpy opencv-python scikit-learn scikit-image joblib
 
 **Implementation**
+
 Deepfake video detection was implemented in following steps -
 1.) Extract all frames from the video.
 2.) Use Haar cascade algorithm to extract coordinates of the faces from frames.
@@ -71,6 +78,7 @@ Deepfake video detection was implemented in following steps -
 
 Note -> We spent a lot of time trying to make this model as accurate as possible. However, we were not able to achieve that becuase we were not able to train our RandomForestClassifier on a large dataset because even smaller datasets took hours to run.The code can give inaccurate results sometimes.
 
-**How to Run - **
+**How to Run**
+
 Paste the path of the video to be tested in Deepfake.py Run the Deepfake.py script in command window using the command
  -> python Deepfake.py
