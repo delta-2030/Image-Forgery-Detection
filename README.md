@@ -75,6 +75,6 @@ Deepfake video detection was implemented in following steps -
 
 Note -> We spent a lot of time trying to make this model as accurate as possible. However, we were not able to achieve that becuase we were not able to train our RandomForestClassifier on a large dataset because even smaller datasets took hours to run.The code can give inaccurate results sometimes.
 
-**How to Run**
+**How to Run - **
 Paste the path of the video to be tested in Deepfake.py Run the Deepfake.py script in command window using the command
  -> python Deepfake.py
