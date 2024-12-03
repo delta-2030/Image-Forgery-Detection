@@ -1,6 +1,7 @@
 # Image-Forgery-Detection
 **SPLICING**
-**Libraries used:**
+
+**Libraries used - **
 **1. OpenCV (cv2)**
 **2. NumPy (numpy as np)**
 **3. Pillow (PIL)**
