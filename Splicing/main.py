@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image, ImageChops
 import matplotlib.pyplot as plt
 
-def ela(forged_image, error_image, new_quality=90):
+def ela(forged_image, error_image, new_quality=90):#function calculate the ela image based on image srtefacts by reducing quality
     forged = Image.open(forged_image).convert('RGB')
     compressed_image = "temp_compressed.jpg"
     forged.save(compressed_image, 'JPEG', quality=new_quality)
@@ -23,7 +23,7 @@ def ela(forged_image, error_image, new_quality=90):
 
     else:
 
-        scale = 255.0 / max_diff if max_diff > 0 else 1
+        scale = 255.0 / max_diff
     enhanced_image = np.zeros((height, width, 3), dtype=np.uint8)
     
     for x in range(width):
@@ -38,11 +38,11 @@ def ela(forged_image, error_image, new_quality=90):
     ela_image.save(error_image)
     return np.array(ela_image)
 
-def detect_forgery(forged_image):
+def detect_forgery(forged_image):#function to detect forgery based on the ela image generated
     ela_image = ela(forged_image, "ela_output.jpg")
     gray_ela = cv2.cvtColor(ela_image, cv2.COLOR_RGB2GRAY)
     _, binary_mask = cv2.threshold(gray_ela, 30, 255, cv2.THRESH_BINARY) 
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(12, 6))#use of matplotloib to show the results
     plt.subplot(1, 2, 1)
     plt.imshow(ela_image)
     plt.axis('off')
@@ -62,5 +62,5 @@ def detect_forgery(forged_image):
     else:
         print("No forgery detected.")
 
-image_path = "image3.jpg"
+image_path = "image1.jpg"#specify the image path
 detect_forgery(image_path)
